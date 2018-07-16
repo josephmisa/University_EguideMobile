@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pmtl.jjar.teamplar.universityguide.MainMenu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="pmtl.jjar.teamplar.universityguide.MapsActivity" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="83dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/fab_st"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="315dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintBottom_creator="0dp"
+        tools:layout_constraintRight_creator="0dp"
+        tools:layout_editor_absoluteY="487dp">
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:onClick="changeType"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/satellite"
+            tools:ignore="OnClick"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_satelite"
+        android:layout_width="66dp"
+        android:layout_height="53dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="false"
+        android:src="@mipmap/mainstreetview"
+        app:backgroundTint="@null"
+        app:pressedTranslationZ="12dp"
+        app:useCompatPadding="false"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="498dp" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="70dp">
+
+        <TextView
+            android:id="@+id/txt_st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@+id/fab_st"
+            android:textSize="20dp"
+            android:text="St Building" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom|end"
+            android:elevation="6dp"
+            android:src="@mipmap/stbuilding"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="130dp">
+        <TextView
+            android:id="@+id/txt_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Building"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_main"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="20dp"
+            android:elevation="6dp"
+            android:src="@mipmap/main"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="190dp">
+
+        <TextView
+            android:id="@+id/txt_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Library"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_library"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/library"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="250dp">
+
+        <TextView
+            android:id="@+id/txt_canteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Canteen"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_canteen"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_canteen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/canteen"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="310dp">
+
+        <TextView
+            android:id="@+id/txt_new_academic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Academic"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_new_academic"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_new_academic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/newacademic"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="370dp">
+
+        <TextView
+            android:id="@+id/txt_auditorium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auditorium"
+            android:visibility="invisible"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_auditorium"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_auditorium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/auditorium"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="430dp">
+
+        <TextView
+            android:id="@+id/txt_main_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Entrance"
+            android:visibility="invisible"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_toStartOf="@id/fab_main_entrance"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_main_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/frontgate"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="490dp">
+
+        <TextView
+            android:id="@+id/txt_backgate_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back Gate Entrance"
+            android:visibility="invisible"
+            android:onClick="backGate"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/fab_backgate_entrance"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            tools:ignore="OnClick" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_backgate_entrance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            android:src="@mipmap/backgate"
+            android:visibility="invisible"
+            app:backgroundTint="@color/white"
+            app:pressedTranslationZ="12dp" />
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
